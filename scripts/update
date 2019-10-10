@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+export XPT_HOME="$(cd "$(dirname "$0")/.." && pwd)"
+
+cd "$XPT_HOME"
+
+git pull
+"${XPT_HOME}/scripts/install" || true

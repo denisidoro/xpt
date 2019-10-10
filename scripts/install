@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+export XPT_HOME="$(cd "$(dirname "$0")/.." && pwd)"
+
+script() {
+   echo "#!/usr/bin/env bash"
+   echo "${XPT_HOME}/xpt" '"$@"'
+}
+
+folder="${1:-/usr/local/bin}"
+bin="${folder}/xpt"
+
+script > "$bin"
+chmod +x "$bin"

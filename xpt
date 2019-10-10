@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+export XPT_HOME="$(cd "$(dirname "$0")" && pwd)"
+
+source "${XPT_HOME}/src/main.sh"
+
+##? An abstraction over whatever package managers you have installed in your system
+##?
+##? Usage:
+##?    xpt [command] [<args>...] [options]
+##?
+##? Commands:
+##?    install <packages>...    Install packages
+##?    remove <packages>...     Remove packages
+##?    list <query>             List packages
+##?    search <query>           Search for packages
+##?    update <packages>...     Update packages
+##?    upgrade <packages>...    Upgrade packages
+##?
+##? Options:
+##?    -a --ask                 Ask for confirmation
+##?
+##? Examples:
+##?    xpt install curl
+
+VERSION="0.1.0"
+
+opts::eval "$@"
+main "$@"

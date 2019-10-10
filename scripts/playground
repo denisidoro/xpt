@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+export XPT_HOME="$(cd "$(dirname "$0")/.." && pwd)"
+export xpt_PATH="${XPT_HOME}/test:${XPT_HOME}/cheats"
+
+"${XPT_HOME}/xpt" "$@"
