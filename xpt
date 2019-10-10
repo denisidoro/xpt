@@ -24,7 +24,7 @@ source "${XPT_HOME}/src/main.sh"
 ##? Examples:
 ##?    xpt install curl
 
-VERSION="0.1.0"
+VERSION="0.2.0"
 
 opts::eval "$@"
 main "$@"

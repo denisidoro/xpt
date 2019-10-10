@@ -3,7 +3,7 @@
 pkg_manager::all() {
    coll::new brew
    if ! platform::is_osx; then
-      apt yum pacman pkg apk opkg
+      coll::new apt yum pacman pkg apk opkg
    fi
    coll::new custom
    coll::new npm pip
