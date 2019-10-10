@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 _pacman() {
-  pacman --color=always "$@"
+   pacman --color=always "$@"
 }
 
 pacman::install() {

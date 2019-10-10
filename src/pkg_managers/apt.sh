@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 if platform::command_exists apt-get && ! platform::command_exists apt; then
-  apt() {
-    apt-get "$@"
-  }
+   apt() {
+      apt-get "$@"
+   }
 
-  export -f apt-get
+   export -f apt-get
 fi
 
 apt::install() {

@@ -9,7 +9,7 @@ _import() {
    shift
    for ns in $@; do
       source "${XPT_HOME}/src/${folder}/${ns}.sh"
-   done   
+   done
 }
 
 _import lang coll dict misc platform str
@@ -32,16 +32,16 @@ handler::home() {
 }
 
 handler::pkg_manager_operation() {
-  local -r operation="$1"
-  
-  local -r packages="$(dict::get "$OPTIONS" values)"
-  local -r pkg_managers="$(dict::get "$OPTIONS" pkg_managers)"
+   local -r operation="$1"
 
-  for pkg_manager in $pkg_managers; do
-   if "${pkg_manager}::${operation}" "$packages"; then
-      return 0
-   fi
-  done
+   local -r packages="$(dict::get "$OPTIONS" values)"
+   local -r pkg_managers="$(dict::get "$OPTIONS" pkg_managers)"
+
+   for pkg_manager in $pkg_managers; do
+      if "${pkg_manager}::${operation}" "$packages"; then
+         return 0
+      fi
+   done
 
    return 1
 }

@@ -1,6 +1,6 @@
 # xpt [![CircleCI](https://circleci.com/gh/denisidoro/xpt.svg?style=svg)](https://circleci.com/gh/denisidoro/xpt) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/denisidoro/xpt?include_prereleases)
 
-**xpt** is an abstraction over whatever package managers you have installed in your system. No need to run different setup commands based on the distro you're running anymore!
+**xpt** is an abstraction over whatever package managers you have installed in your system. No need to run different commands based on the distro you're running anymore!
 
 Let's say you want to install [ag](https://github.com/ggreer/the_silver_searcher). This is the required procedure:
 ```sh
@@ -14,7 +14,7 @@ apt-get install silversearcher-ag
 yum install the_silver_searcher
 ```
 
-With **xpt**, `xpt install ag` will do the trick!
+Fortunately, `xpt install ag` will do the trick!
 
 Table of contents
 -----------------
@@ -24,6 +24,8 @@ Table of contents
       * [Using git](#using-git)
    * [Upgrading](#upgrading)
    * [Usage](#usage)
+      * [Installing packages](#installing-packages)
+      * [More options](#more-options)
    * [Recipes](#recipes)
       * [Using your own custom recipes](#using-your-own-custom-recipes)
       * [Submitting recipes](#submitting-recipes)
@@ -79,6 +81,8 @@ Recipes
 
 **xpt** can install software based on custom recipes. This allows you to add a custom behavior to a install script or to add a fallback in case no compatible package manager was found. 
 
+Please refer to [the examples](https://github.com/denisidoro/xpt/tree/master/src/recipes) in order to help you write recipes. 
+
 ### Using your own custom recipes
 
 In this case, you need to pass a `:`-separated list of separated directories which contain `.cheat` files:
@@ -99,3 +103,6 @@ Etymology
 ---------
 
 In [Mass Effect](https://masseffect.fandom.com/wiki/Mass_Effect_Wiki), [Expat](https://masseffect.fandom.com/wiki/Expat) is a merchant from the [Citadel](https://masseffect.fandom.com/wiki/Citadel), center of communication between the various races that inhabit the galaxy.
+
+
+In addition, **xpt** is similar to [apt](https://en.wikipedia.org/wiki/Advanced_Packaging_Tool).

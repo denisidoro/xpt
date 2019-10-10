@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 _npm() {
-  npm -g "$@"
+   npm -g "$@"
 }
 
 npm::install() {
