@@ -2,6 +2,8 @@
 
 **xpt** is an abstraction over whatever package managers you have installed in your system. No need to run different commands based on the distro you're running anymore!
 
+:warning: Due to the unpopularity of this repo, the development of the package manager will be continued together with [my dotfiles](https://github.com/denisidoro/dotfiles/tree/master/scripts/package).
+
 Let's say you want to install [ag](https://github.com/ggreer/the_silver_searcher). This is the required procedure:
 ```sh
 # if you're on OSX
